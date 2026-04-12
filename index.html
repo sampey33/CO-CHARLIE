@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,753 +12,105 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text);min-
 header{background:var(--olive-dark);border-bottom:2px solid var(--khaki);padding:0 20px;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
 .logo{font-family:'Share Tech Mono',monospace;font-size:1rem;color:var(--sand);letter-spacing:4px;display:flex;align-items:center;gap:10px}
 .logo-mark{width:26px;height:26px;border:2px solid var(--sand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px}
-.tabs{display:flex;gap:2px}
-.tab{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;background:transparent;border:1px solid transparent;color:var(--dim);cursor:pointer;transition:all .15s}
-.tab:hover{color:var(--text);border-color:var(--border)}
-.tab.active{background:var(--olive);color:var(--sand);border-color:var(--khaki)}
+.tab{padding:6px 14px;cursor:pointer;background:transparent;border:1px solid var(--border);color:var(--dim)}
+.tab.active{background:var(--olive);color:var(--sand)}
 .view{display:none;padding:24px;max-width:980px;margin:0 auto}
 .view.active{display:block}
-.card{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:20px;margin-bottom:16px}
-.card-title{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--khaki);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.card-title::after{content:'';flex:1;height:1px;background:var(--border)}
-label{display:block;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--dim);margin:12px 0 5px}
-input,textarea,select{width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Barlow',sans-serif;font-size:.9rem;padding:8px 11px;border-radius:3px;outline:none;transition:border-color .2s}
-input:focus,textarea:focus,select:focus{border-color:var(--khaki)}
-textarea{resize:vertical;min-height:64px}
-select option{background:var(--bg3)}
-.btn{font-family:'Barlow Condensed',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:8px 18px;border:none;border-radius:3px;cursor:pointer;transition:all .15s}
-.btn-primary{background:var(--khaki);color:var(--bg)}
-.btn-primary:hover{background:var(--sand)}
-.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--dim)}
-.btn-ghost:hover{border-color:var(--khaki);color:var(--text)}
-.btn-danger{background:transparent;border:1px solid var(--red);color:var(--red)}
-.btn-danger:hover{background:var(--red);color:white}
-.btn-sm{padding:5px 11px;font-size:.75rem}
-.btn-full{width:100%}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-@media(max-width:640px){.grid-2,.grid-3{grid-template-columns:1fr}}
-.flex{display:flex}.gap-8{gap:8px}.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}
-.row-item{background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--khaki);border-radius:3px;padding:10px 14px;margin-bottom:7px;display:flex;align-items:center;gap:10px}
-.row-num{font-family:'Share Tech Mono',monospace;font-size:1rem;color:var(--sand);min-width:28px}
-.row-info{flex:1}
-.row-name{font-weight:600;font-size:.9rem}
-.row-sub{font-family:'Share Tech Mono',monospace;font-size:.68rem;color:var(--khaki);margin-top:2px}
-.row-actions{display:flex;gap:5px}
-.opt-row{display:flex;gap:6px;align-items:center;margin-top:6px}
-.opt-row input{flex:1}
-.opt-ltr{font-family:'Share Tech Mono',monospace;color:var(--khaki);min-width:14px;font-size:.85rem}
-.radio-correct{accent-color:var(--green);width:15px;height:15px;cursor:pointer;flex-shrink:0}
-/* PARTICIPANT VIEWS */
-.p-hero{text-align:center;padding:28px 16px 20px;border-bottom:1px solid var(--border);margin-bottom:24px}
-.p-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;letter-spacing:5px;text-transform:uppercase;color:var(--sand)}
-.p-hero p{color:var(--dim);font-size:.82rem;letter-spacing:1px;margin-top:4px}
-.center-box{max-width:420px;margin:0 auto}
-.center-box input{font-size:1rem;text-align:center;padding:11px;text-transform:uppercase;margin-bottom:12px}
-/* CAMERA */
-.camera-wrap{background:var(--bg3);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:14px}
-.camera-wrap video{width:100%;display:block;max-height:260px;object-fit:cover}
-.camera-wrap canvas{display:none}
-.scan-status{padding:10px 14px;font-family:'Share Tech Mono',monospace;font-size:.82rem;text-align:center}
-/* PROGRESS */
-.prog-label{font-size:.75rem;color:var(--dim);letter-spacing:1px;text-transform:uppercase;display:flex;justify-content:space-between;margin-bottom:5px}
-.prog-outer{height:4px;background:var(--bg3);border-radius:2px}
-.prog-inner{height:4px;background:var(--khaki);border-radius:2px;transition:width .4s}
-.chip-list{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
-.chip{font-family:'Share Tech Mono',monospace;font-size:.7rem;padding:3px 8px;border-radius:2px;border:1px solid var(--border);background:var(--bg3);color:var(--dim)}
-.chip.ok{border-color:var(--green);color:#2ecc71;background:rgba(39,174,96,.1)}
-.chip.ko{border-color:var(--red);color:#e74c3c;background:rgba(192,57,43,.08)}
-.chip.locked{border-color:var(--khaki);color:var(--sand)}
-/* QCM */
-.qcm-wrap{max-width:560px;margin:0 auto}
-.qcm-header{background:var(--olive-dark);border:1px solid var(--khaki);border-radius:3px 3px 0 0;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
-.qcm-header h2{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sand)}
-.qcm-body{background:var(--bg2);border:1px solid var(--khaki);border-top:none;border-radius:0 0 3px 3px;padding:20px}
-.q-text{font-size:.96rem;font-weight:600;line-height:1.5;margin-bottom:14px}
-.opt-choice{display:flex;align-items:center;gap:10px;padding:9px 13px;border:1px solid var(--border);border-radius:3px;margin-bottom:7px;cursor:pointer;background:var(--bg3);transition:all .12s}
-.opt-choice:hover{border-color:var(--khaki)}
-.opt-choice.sel{border-color:var(--sand);background:rgba(200,184,130,.07)}
-.opt-choice.ok{border-color:var(--green);background:rgba(39,174,96,.1);pointer-events:none}
-.opt-choice.ko{border-color:var(--red);background:rgba(192,57,43,.08);pointer-events:none}
-.opt-choice.locked{pointer-events:none}
-.opt-ltr2{font-family:'Share Tech Mono',monospace;font-size:.82rem;color:var(--khaki);min-width:18px}
-.opt-txt{font-size:.88rem}
-.feedback{padding:11px 14px;border-radius:3px;margin-top:12px;font-size:.85rem;font-weight:600;line-height:1.5}
-.feedback.ok{background:rgba(39,174,96,.12);border:1px solid var(--green);color:#2ecc71}
-.feedback.ko{background:rgba(192,57,43,.1);border:1px solid var(--red);color:#e74c3c}
-/* TAGS */
-.tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:2px}
-.tag-wait{background:rgba(200,184,130,.12);color:var(--sand);border:1px solid var(--khaki)}
-.tag-ok{background:rgba(39,174,96,.15);color:#2ecc71;border:1px solid var(--green)}
-.tag-ko{background:rgba(192,57,43,.12);color:#e74c3c;border:1px solid var(--red)}
-/* TIMER */
-.big-timer{font-family:'Share Tech Mono',monospace;font-size:3rem;color:var(--sand);text-align:center;letter-spacing:8px;padding:14px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;margin:12px 0}
-.big-timer.urgent{color:#e74c3c;animation:blink .8s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
-/* LEADERBOARD */
-.lb-row{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--bg3);border:1px solid var(--border);border-radius:3px;margin-bottom:7px}
-.lb-rank{font-family:'Share Tech Mono',monospace;font-size:1.1rem;color:var(--sand);min-width:28px}
-.lb-name{flex:1;font-weight:600}
-.lb-score{font-family:'Share Tech Mono',monospace;font-size:.85rem;color:var(--khaki)}
-.lb-time{font-family:'Share Tech Mono',monospace;font-size:.85rem;color:var(--dim)}
-/* RESULT */
-.result-wrap{max-width:540px;margin:0 auto;text-align:center}
-.result-badge{font-family:'Share Tech Mono',monospace;font-size:4rem;color:var(--sand);line-height:1}
-.result-mention{font-size:.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-top:6px}
-.result-bar{margin:20px auto;height:6px;background:var(--bg3);border-radius:3px;max-width:300px}
-.result-bar-fill{height:6px;border-radius:3px;background:var(--khaki);transition:width 1s}
-.result-rows{text-align:left;margin-top:20px;border-top:1px solid var(--border)}
-.result-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:.86rem}
-.ico-ok{color:var(--green);font-weight:700}.ico-ko{color:var(--red);font-weight:700}.ico-skip{color:var(--dim)}
-/* OVERLAY / MODAL */
-.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;align-items:center;justify-content:center}
-.overlay.open{display:flex}
-.modal{background:var(--bg2);border:1px solid var(--khaki);border-radius:4px;padding:26px;max-width:320px;width:90%;text-align:center}
-.modal h3{font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sand);margin-bottom:14px}
-#qr-out{display:flex;justify-content:center;margin:10px 0}
-#qr-out canvas,#qr-out img{border:5px solid white;border-radius:4px}
-.modal-code{font-family:'Share Tech Mono',monospace;font-size:1.5rem;letter-spacing:6px;color:var(--sand);margin:8px 0}
-.modal-sub{color:var(--dim);font-size:.78rem;margin-bottom:8px}
-/* ADMIN GUARD */
-#admin-guard{display:flex;align-items:center;justify-content:center;min-height:60vh}
-.guard-box{background:var(--bg2);border:1px solid var(--khaki);border-radius:4px;padding:32px;max-width:300px;width:90%;text-align:center}
-.guard-box h2{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sand);margin-bottom:16px}
-.guard-box input{margin-bottom:12px;text-align:center;letter-spacing:4px}
-.err-msg{color:#e74c3c;font-size:.78rem;margin-top:8px}
-/* MISC */
-.badge-final{background:rgba(200,184,130,.12);border:1px solid var(--khaki);border-radius:3px;padding:5px 10px;font-size:.72rem;font-family:'Share Tech Mono',monospace;color:var(--sand)}
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--olive);border-radius:3px}
+.card{background:var(--bg2);border:1px solid var(--border);padding:16px;margin-bottom:12px}
+input,textarea,select{width:100%;padding:8px;background:var(--bg3);border:1px solid var(--border);color:var(--text)}
+button{cursor:pointer}
+.btn{padding:8px 12px;border:0}
+.btn-primary{background:var(--khaki);color:#000}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text)}
+.btn-danger{background:var(--red);color:#fff}
+.row{padding:8px;border:1px solid var(--border);margin:6px 0}
+.big{font-size:2rem;text-align:center}
+.hidden{display:none}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="logo"><div class="logo-mark">✦</div> ORIENTA-TAC</div>
-  <div class="tabs">
-    <button class="tab active" onclick="nav('admin',this)">ADMIN</button>
-    <button class="tab" onclick="nav('participant',this)">PARTICIPANT</button>
-  </div>
-</header>
-
-<!-- ===== ADMIN ===== -->
-<div id="view-admin" class="view active">
-  <!-- GUARD -->
-  <div id="admin-guard">
-    <div class="guard-box">
-      <h2>🔒 Accès Admin</h2>
-      <input type="password" id="admin-pwd-inp" placeholder="••••••••" onkeydown="if(event.key==='Enter')checkPwd()">
-      <button class="btn btn-primary btn-full" onclick="checkPwd()">ENTRER</button>
-      <div class="err-msg" id="pwd-err"></div>
-    </div>
-  </div>
-  <!-- ADMIN CONTENT -->
-  <div id="admin-content" style="display:none">
-    <!-- SUB TABS -->
-    <div class="flex gap-8 mt-8" style="margin-bottom:16px">
-      <button class="btn btn-primary btn-sm" onclick="subNav('postes')">Postes</button>
-      <button class="btn btn-ghost btn-sm" onclick="subNav('joueurs')">Joueurs</button>
-      <button class="btn btn-ghost btn-sm" onclick="subNav('leaderboard')">Classement</button>
-      <button class="btn btn-ghost btn-sm" onclick="subNav('config')">Config</button>
-      <button class="btn btn-danger btn-sm" style="margin-left:auto" onclick="adminLogout()">Déconnexion</button>
-    </div>
-
-    <!-- POSTES -->
-    <div id="sub-postes">
-      <div class="grid-2">
-        <div>
-          <div class="card">
-            <div class="card-title">Postes (10 requis — dernier = commun)</div>
-            <div id="postes-list"></div>
-            <div class="flex gap-8 mt-12">
-              <button class="btn btn-ghost btn-sm" onclick="exportJSON()">⬇ Export</button>
-              <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()">⬆ Import</button>
-              <input type="file" id="imp" accept=".json" style="display:none;width:auto" onchange="importJSON(event)">
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <div class="card-title" id="form-title">Nouveau poste</div>
-            <label>N° de poste (1–10)</label>
-            <input type="number" id="f-num" min="1" max="10" placeholder="1">
-            <div id="final-warning" style="display:none;font-size:.75rem;color:var(--sand);margin-top:4px">⚠ Poste 10 = point final commun à tous les participants</div>
-            <label>Nom / Description</label>
-            <input id="f-name" placeholder="Ex : Crête Nord…">
-            <label>Code QR (unique)</label>
-            <div class="flex gap-8">
-              <input id="f-code" placeholder="ALFA1" style="font-family:'Share Tech Mono',monospace;letter-spacing:3px;text-transform:uppercase">
-              <button class="btn btn-ghost btn-sm" onclick="genCode()">AUTO</button>
-            </div>
-            <label>Question</label>
-            <textarea id="f-question" placeholder="Question tactique ou technique…"></textarea>
-            <label>Options <small style="color:var(--dim);text-transform:none;letter-spacing:0">— 🟢 = bonne réponse</small></label>
-            <div id="opt-builder"></div>
-            <button class="btn btn-ghost btn-sm mt-8" onclick="addOpt()">+ Option</button>
-            <label>Explication</label>
-            <textarea id="f-expl" placeholder="Détaillez la bonne réponse…"></textarea>
-            <div class="flex gap-8 mt-16">
-              <button class="btn btn-primary" onclick="savePoste()">💾 Enregistrer</button>
-              <button class="btn btn-ghost" onclick="resetForm()">Annuler</button>
-            </div>
-            <input type="hidden" id="editing-id" value="">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- JOUEURS -->
-    <div id="sub-joueurs" style="display:none">
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-title">Joueurs autorisés</div>
-          <div id="joueurs-list"></div>
-        </div>
-        <div class="card">
-          <div class="card-title">Ajouter un joueur</div>
-          <label>Pseudo / Matricule</label>
-          <input id="j-pseudo" placeholder="Ex : LECLERC / 3214">
-          <label>Ordre de départ (rotation des postes intermédiaires)</label>
-          <select id="j-order">
-            <option value="0">Rotation 1</option>
-            <option value="1">Rotation 2</option>
-            <option value="2">Rotation 3</option>
-            <option value="3">Rotation 4</option>
-            <option value="4">Rotation 5</option>
-            <option value="5">Rotation 6</option>
-            <option value="6">Rotation 7</option>
-            <option value="7">Rotation 8</option>
-            <option value="8">Rotation 9</option>
-          </select>
-          <div style="font-size:.73rem;color:var(--dim);margin-top:6px">L'ordre détermine le parcours des postes 1–9. Le poste 10 est identique pour tous.</div>
-          <button class="btn btn-primary mt-12 btn-full" onclick="addJoueur()">AJOUTER</button>
-          <div class="mt-16">
-            <button class="btn btn-ghost btn-sm" onclick="genPseudo()">🎲 Générer pseudo aléatoire</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- LEADERBOARD -->
-    <div id="sub-leaderboard" style="display:none">
-      <div class="card">
-        <div class="card-title">Classement en temps réel</div>
-        <div id="lb-list"></div>
-        <button class="btn btn-danger btn-sm mt-12" onclick="if(confirm('Effacer tous les résultats ?')){sessions=[];persist();renderLB();}">Réinitialiser résultats</button>
-      </div>
-    </div>
-
-    <!-- CONFIG -->
-    <div id="sub-config" style="display:none">
-      <div class="card">
-        <div class="card-title">Paramètres généraux</div>
-        <label>Nom de la course</label>
-        <input id="cfg-name" value="Exercice ALPHA — Zone BRAVO">
-        <label>Unité</label>
-        <input id="cfg-unit" value="Section 2 — Peloton Éclaireur">
-        <label>Durée du chrono (minutes)</label>
-        <input type="number" id="cfg-duration" value="120" min="1" max="480">
-        <label>Mot de passe admin</label>
-        <input type="password" id="cfg-pwd" placeholder="Laisser vide = inchangé">
-        <button class="btn btn-primary mt-12" onclick="saveConfig()">💾 Enregistrer</button>
-      </div>
-    </div>
-
-  </div><!-- /admin-content -->
+<div class="logo"><div class="logo-mark">✦</div> ORIENTA-TAC</div>
+<div>
+<button class="tab active" onclick="nav('admin',this)">ADMIN</button>
+<button class="tab" onclick="nav('participant',this)">PARTICIPANT</button>
 </div>
+</header><!-- ADMIN --><div id="view-admin" class="view active"><div id="admin-login" class="card">
+<h3>Accès admin</h3>
+<input type="password" id="pwd" placeholder="mot de passe">
+<button class="btn btn-primary" onclick="loginAdmin()">Entrer</button>
+<div id="err"></div>
+</div><div id="admin-panel" class="hidden"><div class="card">
+<h3>Postes</h3>
+<div id="posts"></div>
+<hr>
+<input id="pnum" type="number" placeholder="num">
+<input id="pname" placeholder="nom">
+<textarea id="pquest" placeholder="question"></textarea>
+<input id="pop1" placeholder="option 1">
+<input id="pop2" placeholder="option 2">
+<input id="pop3" placeholder="option 3">
+<input id="pcorrect" type="number" placeholder="bonne réponse (1-3)">
+<button class="btn btn-primary" onclick="addPost()">Ajouter</button>
+</div><div class="card">
+<h3>Joueurs</h3>
+<div id="players"></div>
+<input id="player" placeholder="pseudo">
+<button class="btn btn-primary" onclick="addPlayer()">Ajouter</button>
+</div></div>
+</div><!-- PARTICIPANT --><div id="view-participant" class="view"><div id="login" class="card">
+<input id="plog" placeholder="pseudo">
+<button class="btn btn-primary" onclick="loginPlayer()">Start</button>
+</div><div id="game" class="hidden">
+<div class="big" id="timer">00:00</div>
+<div id="qbox"></div>
+<button class="btn btn-primary" onclick="nextQ()">Valider</button>
+</div></div><script>
+let posts = JSON.parse(localStorage.getItem('posts')||'[]');
+let players = JSON.parse(localStorage.getItem('players')||'[]');
+let currentPlayer = null;
+let idx = 0;
 
-<!-- ===== PARTICIPANT ===== -->
-<div id="view-participant" class="view">
-  <div class="p-hero">
-    <h1 id="ph-name">ORIENTA-TAC</h1>
-    <p id="ph-unit">Scannez les QR codes sur les balises</p>
-  </div>
+function save(){localStorage.setItem('posts',JSON.stringify(posts));localStorage.setItem('players',JSON.stringify(players));}
 
-  <!-- LOGIN -->
-  <div id="s-login">
-    <div class="center-box">
-      <label>Votre pseudo autorisé</label>
-      <input id="p-name-inp" placeholder="LECLERC / 3214">
-      <button class="btn btn-primary btn-full" onclick="loginParticipant()">COMMENCER LA COURSE</button>
-      <div class="err-msg mt-8" id="login-err"></div>
-    </div>
-  </div>
+function nav(v,el){
+document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
+document.getElementById('view-'+v).classList.add('active');
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+el.classList.add('active');}
 
-  <!-- SCAN -->
-  <div id="s-scan" style="display:none">
-    <div style="max-width:480px;margin:0 auto">
-      <!-- Timer -->
-      <div class="big-timer" id="p-timer">02:00:00</div>
-      <!-- Header info -->
-      <div class="flex gap-8" style="align-items:center;margin-bottom:12px">
-        <div style="flex:1;font-family:'Share Tech Mono',monospace;font-size:.85rem;color:var(--sand)" id="scan-name-disp">—</div>
-        <span id="scan-tag" class="tag tag-wait">0 / 10</span>
-        <span id="next-badge" class="badge-final" style="display:none">▶ FINAL</span>
-      </div>
-      <!-- Prochain poste attendu -->
-      <div style="background:var(--olive-dark);border:2px solid var(--khaki);border-radius:4px;padding:16px 18px;margin-bottom:12px;text-align:center">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:6px">Prochain poste</div>
-        <div id="next-poste-info" style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:2px;color:var(--sand);line-height:1.2">—</div>
-      </div>
-      <!-- Saisie manuelle toujours visible -->
-      <div class="card" style="margin-bottom:12px">
-        <div class="card-title">Saisir le code de la balise</div>
-        <div class="flex gap-8">
-          <input id="manual-code-inp" placeholder="Ex : ALFA1" style="font-family:'Share Tech Mono',monospace;letter-spacing:3px;text-transform:uppercase" onkeydown="if(event.key==='Enter')submitManual()">
-          <button class="btn btn-primary" onclick="submitManual()">OK</button>
-        </div>
-        <div class="err-msg mt-8" id="scan-err"></div>
-      </div>
-      <!-- Camera (optionnelle, HTTPS uniquement) -->
-      <div id="camera-wrap" style="display:none">
-        <div class="camera-wrap">
-          <video id="cam-video" playsinline autoplay muted></video>
-          <canvas id="cam-canvas"></canvas>
-        </div>
-        <div class="scan-status" id="scan-status">📷 Caméra active</div>
-      </div>
-      <button class="btn btn-ghost btn-sm btn-full" id="cam-toggle-btn" onclick="toggleCamera()" style="margin-bottom:14px">📷 Activer la caméra QR (HTTPS requis)</button>
-      <!-- Progress -->
-      <div class="prog-label"><span>PROGRESSION</span><span id="prog-txt">0 / 10</span></div>
-      <div class="prog-outer"><div class="prog-inner" id="prog-bar" style="width:0%"></div></div>
-      <div class="chip-list" id="chip-list"></div>
-    </div>
-  </div>
-
-  <!-- QCM -->
-  <div id="s-qcm" style="display:none">
-    <div class="qcm-wrap">
-      <div class="qcm-header">
-        <h2>POSTE <span id="qn"></span> — <span id="qname"></span></h2>
-        <div class="flex gap-8" style="align-items:center">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:.8rem;color:var(--sand)" id="qcm-timer-disp">—</div>
-          <span id="qtag" class="tag tag-wait">EN COURS</span>
-        </div>
-      </div>
-      <div class="qcm-body">
-        <div class="q-text" id="q-text"></div>
-        <div id="q-opts"></div>
-        <div id="q-feedback" style="display:none"></div>
-        <div class="mt-16" id="q-submit"><button class="btn btn-primary" onclick="submitAnswer()">VALIDER</button></div>
-        <div class="mt-12" id="q-next" style="display:none"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- RESULT -->
-  <div id="s-result" style="display:none">
-    <div class="result-wrap">
-      <div class="result-badge" id="r-score"></div>
-      <div style="font-family:'Share Tech Mono',monospace;font-size:1rem;color:var(--khaki);margin-top:4px" id="r-time"></div>
-      <div class="result-mention" id="r-mention"></div>
-      <div class="result-bar"><div class="result-bar-fill" id="r-bar" style="width:0%"></div></div>
-      <div class="result-rows" id="r-rows"></div>
-      <button class="btn btn-ghost mt-24" onclick="restart()">↩ Nouvelle session</button>
-    </div>
-  </div>
-</div>
-
-<!-- QR MODAL -->
-<div class="overlay" id="qr-overlay">
-  <div class="modal">
-    <h3>Balise — Poste <span id="qr-num"></span></h3>
-    <div id="qr-out"></div>
-    <div class="modal-code" id="qr-code-disp"></div>
-    <div class="modal-sub" id="qr-name-disp"></div>
-    <div style="font-size:.7rem;color:var(--dim);margin-top:6px;font-style:italic">Imprimez et plastifiez pour la balise terrain.</div>
-    <button class="btn btn-ghost btn-sm mt-12" onclick="closeQR()">Fermer</button>
-  </div>
-</div>
-
-<script>
-/* ===================== STORAGE ===================== */
-function load(k,d){try{const v=localStorage.getItem(k);return v!==null?JSON.parse(v):d;}catch{return d;}}
-function save(k,v){localStorage.setItem(k,JSON.stringify(v));}
-
-let postes   = load('ot_postes',[]);
-let sessions = load('ot_sessions',[]);
-let joueurs  = load('ot_joueurs',[]);
-let config   = load('ot_config',{name:'Exercice ALPHA — Zone BRAVO',unit:'Section 2 — Peloton Éclaireur',duration:120,pwd:'admin1234'});
-
-function persist(){save('ot_postes',postes);save('ot_sessions',sessions);save('ot_joueurs',joueurs);save('ot_config',config);}
-
-/* ===================== ADMIN AUTH ===================== */
-let adminUnlocked = false;
-function checkPwd(){
-  const v = document.getElementById('admin-pwd-inp').value;
-  if(v === config.pwd){ adminUnlocked=true; document.getElementById('admin-guard').style.display='none'; document.getElementById('admin-content').style.display='block'; renderAll(); }
-  else { document.getElementById('pwd-err').textContent='Mot de passe incorrect.'; }
-}
-function adminLogout(){ adminUnlocked=false; document.getElementById('admin-guard').style.display='flex'; document.getElementById('admin-content').style.display='none'; document.getElementById('admin-pwd-inp').value=''; document.getElementById('pwd-err').textContent=''; }
-function saveConfig(){
-  config.name = document.getElementById('cfg-name').value||config.name;
-  config.unit = document.getElementById('cfg-unit').value||config.unit;
-  config.duration = parseInt(document.getElementById('cfg-duration').value)||120;
-  const np = document.getElementById('cfg-pwd').value;
-  if(np) config.pwd = np;
-  persist(); alert('Configuration enregistrée.');
+function loginAdmin(){
+if(document.getElementById('pwd').value==='admin'){document.getElementById('admin-login').classList.add('hidden');document.getElementById('admin-panel').classList.remove('hidden');render();}else{document.getElementById('err').innerText='Erreur';}
 }
 
-/* ===================== ADMIN NAV ===================== */
-const subViews = ['postes','joueurs','leaderboard','config'];
-function subNav(v){
-  subViews.forEach(s=>{ const el=document.getElementById('sub-'+s); if(el) el.style.display=s===v?'block':'none'; });
-  if(v==='leaderboard') renderLB();
-}
-function nav(v,btn){
-  document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(el=>el.classList.remove('active'));
-  document.getElementById('view-'+v).classList.add('active');
-  btn.classList.add('active');
-  if(v==='participant') initPView();
-}
-
-/* ===================== OPTIONS BUILDER ===================== */
-let optIdx=0;
-function addOpt(data){
-  const i=optIdx++;const L='ABCDEFGH';
-  const count=document.getElementById('opt-builder').children.length;
-  const d=document.createElement('div');d.className='opt-row';d.id='orow-'+i;
-  d.innerHTML=`<span class="opt-ltr">${L[count]}</span><input type="text" id="ot-${i}" placeholder="Option" value="${data?.text||''}"><input type="radio" name="correct" class="radio-correct" id="or-${i}" value="${i}" ${data?.correct?'checked':''} title="Bonne réponse"><button class="btn btn-danger btn-sm" onclick="document.getElementById('orow-${i}').remove()">✕</button>`;
-  document.getElementById('opt-builder').appendChild(d);
-}
-function getOpts(){return [...document.querySelectorAll('[id^="orow-"]')].map(r=>{const idx=r.id.replace('orow-','');return{text:document.getElementById('ot-'+idx)?.value.trim()||'',correct:document.getElementById('or-'+idx)?.checked||false};}).filter(o=>o.text);}
-function initOpts(opts){optIdx=0;document.getElementById('opt-builder').innerHTML='';(opts||[{},{},{},{}]).forEach(o=>addOpt(o));}
-function genCode(){const C='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';document.getElementById('f-code').value=[...Array(5)].map(()=>C[Math.random()*C.length|0]).join('');}
-
-/* ===================== POSTES CRUD ===================== */
-document.getElementById('f-num').addEventListener('input',function(){
-  document.getElementById('final-warning').style.display=this.value==='10'?'block':'none';
+function addPost(){
+posts.push({
+num:document.getElementById('pnum').value,
+name:document.getElementById('pname').value,
+q:document.getElementById('pquest').value,
+opts:[pop1.value,pop2.value,pop3.value],
+correct:+document.getElementById('pcorrect').value
 });
-function savePoste(){
-  const num=parseInt(document.getElementById('f-num').value);
-  const name=document.getElementById('f-name').value.trim();
-  const code=document.getElementById('f-code').value.trim().toUpperCase();
-  const q=document.getElementById('f-question').value.trim();
-  const expl=document.getElementById('f-expl').value.trim();
-  const opts=getOpts();const eid=document.getElementById('editing-id').value;
-  if(!num||num<1||num>10||!name||!code||!q||opts.length<2){alert('Remplissez tous les champs (poste 1–10, min 2 options).');return;}
-  if(!opts.some(o=>o.correct)){alert('Cochez la bonne réponse.');return;}
-  if(postes.find(p=>p.code===code&&p.id!==eid)){alert('Code déjà utilisé.');return;}
-  if(postes.find(p=>p.num===num&&p.id!==eid)){alert('N° de poste déjà utilisé.');return;}
-  const p={id:eid||Math.random().toString(36).slice(2),num,name,code,question:q,explication:expl,options:opts,isFinal:num===10};
-  if(eid){const idx=postes.findIndex(x=>x.id===eid);postes[idx]=p;}else postes.push(p);
-  postes.sort((a,b)=>a.num-b.num);
-  persist();renderPostes();resetForm();
-}
-function renderPostes(){
-  const el=document.getElementById('postes-list');
-  if(!postes.length){el.innerHTML='<div style="color:var(--dim);font-size:.85rem;padding:8px 0">Aucun poste. Créez-en un →</div>';return;}
-  el.innerHTML=postes.map(p=>`<div class="row-item"><div class="row-num">${String(p.num).padStart(2,'0')}</div><div class="row-info"><div class="row-name">${p.name}${p.isFinal?' <span class="badge-final">FINAL</span>':''}</div><div class="row-sub">${p.code}</div></div><div class="row-actions"><button class="btn btn-ghost btn-sm" onclick="openQR('${p.id}')">QR</button><button class="btn btn-ghost btn-sm" onclick="editPoste('${p.id}')">✏</button><button class="btn btn-danger btn-sm" onclick="delPoste('${p.id}')">✕</button></div></div>`).join('');
-}
-function editPoste(id){const p=postes.find(x=>x.id===id);if(!p)return;document.getElementById('f-num').value=p.num;document.getElementById('f-name').value=p.name;document.getElementById('f-code').value=p.code;document.getElementById('f-question').value=p.question;document.getElementById('f-expl').value=p.explication||'';document.getElementById('editing-id').value=p.id;document.getElementById('form-title').textContent='Modifier poste';document.getElementById('final-warning').style.display=p.num===10?'block':'none';initOpts(p.options);}
-function delPoste(id){if(!confirm('Supprimer ?'))return;postes=postes.filter(p=>p.id!==id);persist();renderPostes();}
-function resetForm(){['f-num','f-name','f-code','f-question','f-expl'].forEach(i=>document.getElementById(i).value='');document.getElementById('editing-id').value='';document.getElementById('form-title').textContent='Nouveau poste';document.getElementById('final-warning').style.display='none';initOpts();}
+save();render();}
 
-/* ===================== JOUEURS ===================== */
-const NATO=['ALFA','BRAVO','CHARLIE','DELTA','ECHO','FOXTROT','GOLF','HOTEL','INDIA','JULIET','KILO','LIMA','MIKE','NOVEMBER','OSCAR'];
-function genPseudo(){
-  const w1=NATO[Math.random()*NATO.length|0];const n=100+Math.random()*900|0;
-  document.getElementById('j-pseudo').value=w1+'-'+n;
-}
-function addJoueur(){
-  const pseudo=document.getElementById('j-pseudo').value.trim().toUpperCase();
-  const order=parseInt(document.getElementById('j-order').value);
-  if(!pseudo){alert('Entrez un pseudo.');return;}
-  if(joueurs.find(j=>j.pseudo===pseudo)){alert('Pseudo déjà existant.');return;}
-  joueurs.push({id:Math.random().toString(36).slice(2),pseudo,order,active:true});
-  persist();renderJoueurs();document.getElementById('j-pseudo').value='';
-}
-function renderJoueurs(){
-  const el=document.getElementById('joueurs-list');
-  if(!joueurs.length){el.innerHTML='<div style="color:var(--dim);font-size:.85rem">Aucun joueur.</div>';return;}
-  el.innerHTML=joueurs.map(j=>`<div class="row-item"><div class="row-info"><div class="row-name">${j.pseudo}</div><div class="row-sub">Rotation ${j.order+1} · ${j.active?'ACTIF':'INACTIF'}</div></div><div class="row-actions"><button class="btn btn-ghost btn-sm" onclick="toggleJoueur('${j.id}')">${j.active?'Désactiver':'Activer'}</button><button class="btn btn-danger btn-sm" onclick="delJoueur('${j.id}')">✕</button></div></div>`).join('');
-}
-function toggleJoueur(id){const j=joueurs.find(x=>x.id===id);if(j){j.active=!j.active;persist();renderJoueurs();}}
-function delJoueur(id){if(!confirm('Supprimer ?'))return;joueurs=joueurs.filter(j=>j.id!==id);persist();renderJoueurs();}
+function render(){
+document.getElementById('posts').innerHTML=posts.map((p,i)=>`<div class='row'>${p.num} - ${p.name}</div>`).join('');
+document.getElementById('players').innerHTML=players.map(p=>`<div class='row'>${p}</div>`).join('');}
 
-/* ===================== LEADERBOARD ===================== */
-function renderLB(){
-  const el=document.getElementById('lb-list');
-  if(!sessions.length){el.innerHTML='<div style="color:var(--dim);font-size:.85rem">Aucun résultat encore.</div>';return;}
-  const sorted=[...sessions].sort((a,b)=>{ if(b.score!==a.score) return b.score-a.score; return (a.elapsed||Infinity)-(b.elapsed||Infinity); });
-  el.innerHTML=sorted.map((s,i)=>`<div class="lb-row"><div class="lb-rank">${i+1}</div><div class="lb-name">${s.name}</div><div class="lb-score">${s.score}/${s.total} pts</div><div class="lb-time">${s.elapsed!=null?fmtTime(s.elapsed):'—'}</div><div style="font-size:.7rem;color:var(--dim)">${s.date}</div></div>`).join('');
-}
-function fmtTime(s){const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sec=s%60;return [h,m,sec].map(v=>String(v).padStart(2,'0')).join(':');}
+function addPlayer(){players.push(player.value.toUpperCase());save();render();player.value='';}
 
-/* ===================== EXPORT / IMPORT ===================== */
-function exportJSON(){const b=new Blob([JSON.stringify({postes,joueurs,config:{name:config.name,unit:config.unit,duration:config.duration}},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='orienta-tac.json';a.click();}
-function importJSON(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(d.postes)postes=d.postes;if(d.joueurs)joueurs=d.joueurs;if(d.config)Object.assign(config,d.config);persist();renderAll();alert('Importé !');}catch{alert('Fichier invalide.');}};r.readAsText(f);}
+function loginPlayer(){
+currentPlayer=document.getElementById('plog').value.toUpperCase();
+if(!currentPlayer)return;
+document.getElementById('login').classList.add('hidden');
+document.getElementById('game').classList.remove('hidden');renderQ();}
 
-/* ===================== QR ===================== */
-function openQR(id){
-  const p=postes.find(x=>x.id===id);if(!p)return;
-  document.getElementById('qr-num').textContent=String(p.num).padStart(2,'0');
-  document.getElementById('qr-code-disp').textContent=p.code;
-  document.getElementById('qr-name-disp').textContent=p.name+(p.isFinal?' — POINT FINAL':'');
-  const out=document.getElementById('qr-out');out.innerHTML='';
-  const url=location.href.split('?')[0]+'?poste='+p.code;
-  new QRCode(out,{text:url,width:180,height:180,colorDark:'#1a1c16',colorLight:'#ffffff'});
-  document.getElementById('qr-overlay').classList.add('open');
-}
-function closeQR(){document.getElementById('qr-overlay').classList.remove('open');}
-
-/* ===================== ROTATION LOGIC ===================== */
-// Postes 1–9 sont intermédiaires, poste 10 est final (commun)
-// Chaque rotation est une permutation différente des postes 1–9
-function getRouteForJoueur(joueur){
-  const intermediaires=postes.filter(p=>!p.isFinal).sort((a,b)=>a.num-b.num);
-  const final=postes.find(p=>p.isFinal);
-  // Rotation = décalage circulaire de l'ordre
-  const rot=joueur.order % intermediaires.length;
-  const rotated=[...intermediaires.slice(rot),...intermediaires.slice(0,rot)];
-  return final ? [...rotated,final] : rotated;
-}
-function getNextPoste(joueur,validated){
-  const route=getRouteForJoueur(joueur);
-  return route.find(p=>!validated.hasOwnProperty(p.code))||null;
+function renderQ(){
+if(idx>=posts.length){document.getElementById('qbox').innerHTML='FIN';return;}
+let p=posts[idx];
+document.getElementById('qbox').innerHTML=`<h3>${p.q}</h3>`+p.opts.map((o,i)=>`<div><input type='radio' name='a' value='${i+1}'> ${o}</div>`).join('');
 }
 
-/* ===================== PARTICIPANT STATE ===================== */
-let pJoueur=null, pValidated={}, pStartTime=null, pElapsed=null;
-let pTimerInterval=null, pScanInterval=null, pSelOpt=null, pCurrentPoste=null;
-let pCameraActive=false;
-
-function initPView(){
-  document.getElementById('ph-name').textContent=config.name||'ORIENTA-TAC';
-  document.getElementById('ph-unit').textContent=config.unit||'';
-}
-
-function loginParticipant(){
-  const n=document.getElementById('p-name-inp').value.trim().toUpperCase();
-  const j=joueurs.find(x=>x.pseudo===n&&x.active);
-  if(!j){document.getElementById('login-err').textContent='Pseudo non autorisé ou inactif.';return;}
-  if(postes.length<10){document.getElementById('login-err').textContent='La course n\'est pas encore prête (10 postes requis).';return;}
-  pJoueur=j; pValidated={}; pStartTime=Date.now(); pElapsed=null; pSelOpt=null; pCurrentPoste=null;
-  document.getElementById('s-login').style.display='none';
-  document.getElementById('s-scan').style.display='block';
-  document.getElementById('scan-name-disp').textContent=j.pseudo;
-  startParticipantTimer();
-  updateProgress();
-  startCamera();
-  // URL param ?
-  const urlCode=new URLSearchParams(location.search).get('poste');
-  if(urlCode){history.replaceState({},'',location.pathname);launchQCM(urlCode);}
-}
-
-/* ===== TIMER ===== */
-function startParticipantTimer(){
-  clearInterval(pTimerInterval);
-  const dur=config.duration*60;
-  pTimerInterval=setInterval(()=>{
-    if(pElapsed!==null){clearInterval(pTimerInterval);return;}
-    const elapsed=Math.floor((Date.now()-pStartTime)/1000);
-    const rem=dur-elapsed;
-    const timerEl=document.getElementById('p-timer');
-    const qTimerEl=document.getElementById('qcm-timer-disp');
-    if(rem<=0){
-      if(timerEl)timerEl.textContent='00:00:00';
-      clearInterval(pTimerInterval);
-      alert('Temps écoulé ! La course est terminée.');
-      finishRace();
-      return;
-    }
-    const display=fmtTime(rem);
-    if(timerEl)timerEl.textContent=display;
-    if(qTimerEl)qTimerEl.textContent=display;
-    if(rem<=300&&timerEl)timerEl.classList.add('urgent');
-  },1000);
-}
-
-/* ===== CAMERA / QR SCAN ===== */
-let jsQR=null;
-async function loadJsQR(){if(jsQR)return jsQR;return new Promise(res=>{const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/jsqr/1.4.0/jsQR.min.js';s.onload=()=>{jsQR=window.jsQR;res(jsQR);};document.head.appendChild(s);});}
-
-async function startCamera(){
-  if(pCameraActive)return;
-  const wrap=document.getElementById('camera-wrap');
-  const btn=document.getElementById('cam-toggle-btn');
-  try{
-    await loadJsQR();
-    const video=document.getElementById('cam-video');
-    const stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'},audio:false});
-    video.srcObject=stream;await video.play();
-    pCameraActive=true;wrap.style.display='block';
-    btn.textContent='📷 Arrêter la caméra';
-    document.getElementById('scan-status').textContent='📷 Caméra active — pointez vers un QR code';
-    startScanLoop();
-  }catch(e){
-    wrap.style.display='none';btn.textContent='📷 Activer la caméra QR (HTTPS requis)';
-    document.getElementById('scan-err').textContent='Caméra indisponible (besoin HTTPS). Utilisez la saisie manuelle.';
-  }
-}
-function stopCamera(){
-  const video=document.getElementById('cam-video');
-  if(video.srcObject){video.srcObject.getTracks().forEach(t=>t.stop());video.srcObject=null;}
-  pCameraActive=false;clearInterval(pScanInterval);
-  document.getElementById('camera-wrap').style.display='none';
-  const btn=document.getElementById('cam-toggle-btn');
-  if(btn)btn.textContent='📷 Activer la caméra QR (HTTPS requis)';
-}
-function toggleCamera(){if(pCameraActive)stopCamera();else startCamera();}
-function startScanLoop(){
-  const video=document.getElementById('cam-video');
-  const canvas=document.getElementById('cam-canvas');
-  const ctx=canvas.getContext('2d');
-  clearInterval(pScanInterval);
-  pScanInterval=setInterval(()=>{
-    if(!pCameraActive||video.readyState<2)return;
-    canvas.width=video.videoWidth;canvas.height=video.videoHeight;
-    ctx.drawImage(video,0,0,canvas.width,canvas.height);
-    const img=ctx.getImageData(0,0,canvas.width,canvas.height);
-    if(jsQR){
-      const result=jsQR(img.data,img.width,img.height);
-      if(result&&result.data){
-        // Extract code from URL or raw
-        let code=result.data;
-        try{const u=new URL(code);code=new URLSearchParams(u.search).get('poste')||code;}catch{}
-        handleScannedCode(code.toUpperCase());
-      }
-    }
-  },300);
-}
-function handleScannedCode(code){
-  if(!pJoueur)return;
-  const errEl=document.getElementById('scan-err');
-  const poste=postes.find(p=>p.code===code);
-  if(!poste){if(errEl)errEl.textContent='⚠ Code inconnu : '+code;return;}
-  if(pValidated.hasOwnProperty(poste.code)){if(errEl)errEl.textContent='✓ Poste '+String(poste.num).padStart(2,'0')+' déjà validé.';return;}
-  const next=getNextPoste(pJoueur,pValidated);
-  if(next&&next.code!==code&&!next.isFinal){if(errEl)errEl.textContent='⚠ Ce n\'est pas votre prochain poste.';return;}
-  if(errEl)errEl.textContent='';
-  stopCamera();clearInterval(pScanInterval);
-  launchQCM(code);
-}
-function submitManual(){
-  const inp=document.getElementById('manual-code-inp');
-  const code=(inp.value||'').trim().toUpperCase();
-  if(!code){document.getElementById('scan-err').textContent='Entrez un code.';return;}
-  document.getElementById('scan-err').textContent='';
-  inp.value='';
-  handleScannedCode(code);
-}
-
-/* ===== PROGRESS ===== */
-function updateProgress(){
-  const route=pJoueur?getRouteForJoueur(pJoueur):[];
-  const done=Object.keys(pValidated).length,tot=postes.length;
-  document.getElementById('prog-txt').textContent=`${done} / ${tot}`;
-  document.getElementById('scan-tag').textContent=`${done} / ${tot}`;
-  document.getElementById('prog-bar').style.width=tot?(done/tot*100)+'%':'0%';
-  document.getElementById('chip-list').innerHTML=route.map((p,i)=>{
-    const v=pValidated[p.code];const cl=v===true?'ok':v===false?'ko':p.isFinal?'locked':'';
-    return `<div class="chip ${cl}">${String(p.num).padStart(2,'0')}${p.isFinal?' ★':''}${v===true?' ✓':v===false?' ✗':''}</div>`;
-  }).join('');
-  // Next poste info
-  const next=pJoueur?getNextPoste(pJoueur,pValidated):null;
-  const nb=document.getElementById('next-badge');
-  if(next){
-    document.getElementById('next-poste-info').textContent=`Poste ${String(next.num).padStart(2,'0')} — ${next.name}${next.isFinal?' (POINT FINAL COMMUN)':''}`;
-    if(next.isFinal)nb.style.display='inline-block';else nb.style.display='none';
-  } else {
-    document.getElementById('next-poste-info').textContent='Tous les postes validés !';nb.style.display='none';
-  }
-}
-
-/* ===== QCM ===== */
-function launchQCM(code){
-  const poste=postes.find(p=>p.code===code);
-  if(!poste){alert('Poste introuvable.');return;}
-  if(pValidated.hasOwnProperty(poste.code)){alert('Poste déjà répondu.');return;}
-  pCurrentPoste=poste;pSelOpt=null;
-  document.getElementById('s-scan').style.display='none';
-  document.getElementById('s-qcm').style.display='block';
-  document.getElementById('qn').textContent=String(poste.num).padStart(2,'0');
-  document.getElementById('qname').textContent=poste.name+(poste.isFinal?' — POINT FINAL':'');
-  document.getElementById('q-text').textContent=poste.question;
-  document.getElementById('qtag').textContent='EN COURS';document.getElementById('qtag').className='tag tag-wait';
-  document.getElementById('q-feedback').style.display='none';
-  document.getElementById('q-submit').style.display='block';
-  document.getElementById('q-next').style.display='none';
-  const L='ABCDEFGH';
-  document.getElementById('q-opts').innerHTML=poste.options.map((o,i)=>`<div class="opt-choice" id="oc-${i}" onclick="selAnswer(${i})"><span class="opt-ltr2">${L[i]}</span><span class="opt-txt">${o.text}</span></div>`).join('');
-}
-function selAnswer(i){pSelOpt=i;document.querySelectorAll('[id^="oc-"]').forEach(el=>el.classList.remove('sel'));document.getElementById('oc-'+i)?.classList.add('sel');}
-function submitAnswer(){
-  if(pSelOpt===null){alert('Sélectionnez une réponse.');return;}
-  const poste=pCurrentPoste;
-  const correct=poste.options[pSelOpt].correct;
-  const corrIdx=poste.options.findIndex(o=>o.correct);
-  const L='ABCDEFGH';
-  document.querySelectorAll('[id^="oc-"]').forEach((el,i)=>{el.classList.add('locked');if(poste.options[i].correct)el.classList.add('ok');else if(i===pSelOpt&&!correct)el.classList.add('ko');});
-  const fb=document.getElementById('q-feedback');fb.style.display='block';
-  fb.className='feedback '+(correct?'ok':'ko');
-  fb.innerHTML=correct?`✓ CORRECT${poste.explication?'<br><small style="font-weight:400;opacity:.85">'+poste.explication+'</small>':''}`:`✗ INCORRECT — Bonne réponse : ${L[corrIdx]}${poste.explication?'<br><small style="font-weight:400;opacity:.85">'+poste.explication+'</small>':''}`;
-  document.getElementById('qtag').textContent=correct?'VALIDÉ ✓':'ÉCHOUÉ ✗';
-  document.getElementById('qtag').className='tag '+(correct?'tag-ok':'tag-ko');
-  document.getElementById('q-submit').style.display='none';
-  pValidated[poste.code]=correct;
-  // Check si dernier poste
-  const allDone=postes.every(p=>pValidated.hasOwnProperty(p.code));
-  if(allDone){
-    pElapsed=Math.floor((Date.now()-pStartTime)/1000);clearInterval(pTimerInterval);
-    document.getElementById('q-next').innerHTML='<button class="btn btn-primary" onclick="finishRace()">TERMINER — VOIR MON RÉSULTAT →</button>';
-  } else {
-    document.getElementById('q-next').innerHTML='<button class="btn btn-ghost" onclick="backToScan()">← Poste suivant</button>';
-  }
-  document.getElementById('q-next').style.display='block';
-}
-function backToScan(){
-  document.getElementById('s-qcm').style.display='none';
-  document.getElementById('s-scan').style.display='block';
-  updateProgress();startCamera();
-}
-
-/* ===== FINISH ===== */
-function finishRace(){
-  if(pElapsed===null) pElapsed=Math.floor((Date.now()-pStartTime)/1000);
-  clearInterval(pTimerInterval);stopCamera();clearInterval(pScanInterval);
-  const score=Object.values(pValidated).filter(Boolean).length,total=postes.length;
-  sessions.push({name:pJoueur.pseudo,score,total,elapsed:pElapsed,date:new Date().toLocaleString('fr-FR'),details:{...pValidated}});
-  persist();
-  ['s-scan','s-qcm'].forEach(id=>document.getElementById(id).style.display='none');
-  document.getElementById('s-result').style.display='block';
-  const pct=total?Math.round(score/total*100):0;
-  document.getElementById('r-score').textContent=`${score}/${total}`;
-  document.getElementById('r-time').textContent='⏱ '+fmtTime(pElapsed);
-  document.getElementById('r-mention').textContent=pct>=80?'EXCELLENT — Mission accomplie':pct>=60?'SATISFAISANT — Peut mieux faire':'INSUFFISANT — Revoir les fondamentaux';
-  setTimeout(()=>document.getElementById('r-bar').style.width=pct+'%',100);
-  const route=getRouteForJoueur(pJoueur);
-  document.getElementById('r-rows').innerHTML=route.map(p=>{const v=pValidated[p.code];const ico=v===true?'<span class="ico-ok">✓ CORRECT</span>':v===false?'<span class="ico-ko">✗ FAUX</span>':'<span class="ico-skip">— NON VALIDÉ</span>';return `<div class="result-row"><div>${String(p.num).padStart(2,'00')} — ${p.name}</div>${ico}</div>`;}).join('');
-}
-function restart(){
-  pJoueur=null;pValidated={};pStartTime=null;pElapsed=null;pCurrentPoste=null;pSelOpt=null;
-  clearInterval(pTimerInterval);stopCamera();clearInterval(pScanInterval);
-  ['s-login','s-scan','s-qcm','s-result'].forEach(id=>document.getElementById(id).style.display='none');
-  document.getElementById('s-login').style.display='block';
-  document.getElementById('p-name-inp').value='';document.getElementById('login-err').textContent='';
-  document.getElementById('p-timer').textContent=fmtTime(config.duration*60);document.getElementById('p-timer').classList.remove('urgent');
-}
-
-/* ===================== RENDER ALL ===================== */
-function renderAll(){renderPostes();renderJoueurs();renderLB();}
-
-/* ===================== URL INTERCEPT ===================== */
-window.addEventListener('load',()=>{
-  if(new URLSearchParams(location.search).get('poste')&&postes.length){
-    document.querySelectorAll('.tab')[1].click();
-  }
-  document.getElementById('p-timer').textContent=fmtTime(config.duration*60);
-  initOpts();
-  if(!postes.length){
-    postes=[
-      {id:'d1',num:1,name:'Crête Nord-Est',code:'ALFA1',question:"Un feu de bivouac non éteint en forêt représente un risque majeur. Quelle est la bonne procédure d'extinction ?",explication:"Noyer à l'eau, remuer les braises et renoyer jusqu'à ce que la zone soit froide au toucher.",options:[{text:'Couvrir de terre uniquement',correct:false},{text:"Noyer à l'eau, remuer, renoyer",correct:true},{text:"Laisser s'éteindre naturellement",correct:false},{text:'Étouffer avec une toile',correct:false}],isFinal:false},
-      {id:'d2',num:2,name:'Carrefour Bravo',code:'BRV02',question:"Sur une carte IGN au 1/25 000, quelle distance réelle représente 4 cm ?",explication:"1 cm = 250 m sur le terrain. 4 cm × 250 m = 1 000 m = 1 km.",options:[{text:'100 m',correct:false},{text:'500 m',correct:false},{text:'1 km',correct:true},{text:'4 km',correct:false}],isFinal:false},
-      {id:'d3',num:3,name:'Point Lima',code:'LIMA3',question:"L'azimut magnétique vers votre objectif est 270°. Dans quelle direction marchez-vous ?",explication:"0°=Nord, 90°=Est, 180°=Sud, 270°=Ouest.",options:[{text:'Nord',correct:false},{text:'Est',correct:false},{text:'Sud',correct:false},{text:'Ouest',correct:true}],isFinal:false},
-      {id:'d10',num:10,name:'Point de Contrôle FINAL',code:'FINAL0',question:"Vous êtes arrivé au point de contrôle final. Quelle est la règle d'or du retour terrain ?",explication:"Toujours rendre compte de son retour à l'élément chef avant tout autre action.",options:[{text:"Rejoindre directement le cantonnement",correct:false},{text:"Rendre compte à l'élément chef avant tout",correct:true},{text:"Attendre les autres équipes",correct:false},{text:"Nettoyer l'équipement en priorité",correct:false}],isFinal:true}
-    ];persist();
-  }
-  renderAll();
-});
-</script>
-</body>
+function nextQ(){idx++;renderQ();}
+</script></body>
 </html>
